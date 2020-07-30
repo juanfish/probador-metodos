@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url : 'http://la2K12.eastus.cloudapp.azure.com:8079/Pview/PViewISAPI.dll/la/rest/TView/WDame_Generico'
+
 };
 
 /*
