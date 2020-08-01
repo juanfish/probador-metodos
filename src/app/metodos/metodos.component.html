@@ -1,6 +1,38 @@
-<div class="row">
-    <div class="col-md-12">
-        <button type="submit" class="btn btn-primary" (click)='onClick();'>Consulta monedas</button>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne" id="consultaMoneda">
+                Dame Generico
+            </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+                <button type="submit" class="btn btn-primary" (click)='dameTs();'>Consulta Ts</button>
+                <!-- <button type="submit" class="btn btn-primary" (click)='dameMoneda();'>Consulta Moneda</button> -->
+            </div>
+        </div>
     </div>
-</div>
 
+    <div class="card">
+        <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                Dame_DatosM - dame_titulos
+            </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <button type="submit" class="btn btn-primary" (click)='dameDatosM();'>Consulta dame_DatosM</button>
+                <button type="submit" class="btn btn-primary" (click)='dameTitulos();'>Consulta dame_titulos</button>
+            </div>
+        </div>
+    </div>
+
+
+    <input type="text" placeholder="ts" [(ngModel)]="this.jsonTs" >
+    <input type="text" placeholder="moneda" [(ngModel)]="this.jsonMon" >
+    <input *ngIf="this.visibleMoneda" type="text" placeholder="moneda2" [(ngModel)]="this.jsonMon" >
+
+    <button type="submit" class="btn btn-primary" (click)='pintaConsola();'>consola</button>
+
+    
+</div>
